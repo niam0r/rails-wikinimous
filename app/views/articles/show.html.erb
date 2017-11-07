@@ -3,12 +3,31 @@
   <h1><%= @article.title %></h1>
 
   <p><%= @article.content %></p>
+</div>
 
-  <br>
+<div class="container inline">
+  <div class="text-left">
+    <%= link_to(edit_article_path(@article)) do %>
+      <i class="fa fa-pencil" aria-hidden="true"></i>
+      <p>Edit Article</p>
+    <% end %>
+  </div>
 
-  <%= link_to(articles_path) do %>
-    <i class="fa fa-undo" aria-hidden="true"></i>
-    <p>Back to index</p>
-  <% end %>
+  <div class="text-center">
+    <%= link_to(articles_path) do %>
+      <i class="fa fa-undo" aria-hidden="true"></i>
+      <p>Back to index</p>
+    <% end %>
+    </div>
+  </div>
+
+  <div class="text-right"><%= link_to(article_path(@article), method: :delete, data: { confirm: "Are you sure?" }) do %>
+      <i class="fa fa-trash-o" aria-hidden="true"></i>
+      <p>Delete Article</p>
+    <% end %>
   </div>
 </div>
+
+
+
+

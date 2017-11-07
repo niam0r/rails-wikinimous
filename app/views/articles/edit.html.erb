@@ -4,10 +4,11 @@
 
   <%= render 'form', article: @article %>
 
-  <%= link_to(articles_path) do %>
-    <i class="fa fa-undo" aria-hidden="true"></i>
-    <p>Back to index</p>
-  <% end %>
-
+  <div class="text-center">
+    <%= link_to(articles_path) do %>
+      <i class="fa fa-undo" aria-hidden="true"></i>
+      <p>Back to index</p>
+    <% end %>
+  </div>
 
 </div>

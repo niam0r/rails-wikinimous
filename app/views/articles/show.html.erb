@@ -5,26 +5,27 @@
   <p><%= @article.content %></p>
 </div>
 
-<div class="container inline">
-  <div class="text-left">
-    <%= link_to(edit_article_path(@article)) do %>
-      <i class="fa fa-pencil" aria-hidden="true"></i>
-      <p>Edit Article</p>
-    <% end %>
-  </div>
+<div class="container">
+  <div class="actions text-center">
+    <ul id="list">
+      <li><%= link_to(edit_article_path(@article)) do %>
+        <i class="fa fa-pencil" aria-hidden="true"></i>
+        <p>Edit Article</p>
+      <% end %>
+      </li>
 
-  <div class="text-center">
-    <%= link_to(articles_path) do %>
-      <i class="fa fa-undo" aria-hidden="true"></i>
-      <p>Back to index</p>
-    <% end %>
-    </div>
-  </div>
+      <li><%= link_to(articles_path) do %>
+        <i class="fa fa-undo" aria-hidden="true"></i>
+        <p>Back to index</p>
+      <% end %>
+      </li>
 
-  <div class="text-right"><%= link_to(article_path(@article), method: :delete, data: { confirm: "Are you sure?" }) do %>
-      <i class="fa fa-trash-o" aria-hidden="true"></i>
-      <p>Delete Article</p>
-    <% end %>
+      <li><%= link_to(article_path(@article), method: :delete, data: { confirm: "Are you sure?" }) do %>
+        <i class="fa fa-trash-o" aria-hidden="true"></i>
+        <p>Delete Article</p>
+      <% end %>
+      </li>
+    </ul>
   </div>
 </div>
 
